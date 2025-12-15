@@ -125,76 +125,104 @@ h1 {
     box-shadow: 0 6px 25px rgba(255, 69, 0, 0.6);
 }
 
-.products {
+/* Product Detail Section */
+.product-detail {
     padding: 5rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    min-height: 80vh; /* Ensure it takes up significant space */
+    display: flex;
+    align-items: center;
 }
 
-h2 {
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 3rem;
-    color: #ff6347;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.product-card {
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    align-items: center;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255, 69, 0, 0.3);
-    border-radius: 20px;
-    padding: 2rem;
+    border-radius: 30px;
+    padding: 3rem;
+    width: 100%;
+}
+
+.product-image {
+    flex: 1;
+    min-width: 300px;
     text-align: center;
-    transition: transform 0.3s, border-color 0.3s;
 }
 
-.product-card:hover {
-    transform: translateY(-10px);
-    border-color: rgba(255, 69, 0, 0.8);
+.product-image img {
+    max-width: 100%;
+    max-height: 500px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
 }
 
-.product-icon {
-    font-size: 4rem;
-    margin-bottom: 1rem;
+.product-image img:hover {
+    transform: scale(1.05) rotate(2deg);
 }
 
-.product-card h3 {
-    font-size: 1.5rem;
+.product-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.product-info h2 {
+    text-align: left;
+    font-size: 3.5rem;
     margin-bottom: 1rem;
     color: #ff6347;
 }
 
-.product-card p {
-    margin-bottom: 1rem;
-    color: #ccc;
-    line-height: 1.6;
-}
-
 .price {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: bold;
     color: #ff4500;
+    margin-bottom: 2rem;
+}
+
+.description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #ddd;
+    margin-bottom: 2rem;
+}
+
+.features {
+    list-style: none;
+    margin-bottom: 3rem;
+}
+
+.features li {
+    font-size: 1.2rem;
     margin-bottom: 1rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .buy-button {
     display: inline-block;
-    padding: 0.8rem 2rem;
-    background: linear-gradient(45deg, #ff4500, #ff6347);
+    padding: 1.2rem 3rem;
+    background: #25D366; /* WhatsApp Green */
     color: white;
     text-decoration: none;
-    border-radius: 25px;
-    transition: transform 0.3s;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
 }
 
 .buy-button:hover {
-    transform: scale(1.05);
+    transform: translateY(-3px);
+    background: #1faf53;
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
 }
 
 .about {
@@ -206,6 +234,13 @@ h2 {
 .about-content {
     max-width: 800px;
     margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: #ff6347;
 }
 
 .about p {
@@ -222,8 +257,33 @@ footer {
     border-top: 2px solid rgba(255, 69, 0, 0.3);
 }
 
+@media (max-width: 900px) {
+    .product-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-info h2 {
+        text-align: center;
+    }
+
+    .features {
+        display: inline-block;
+        text-align: left;
+    }
+}
+
 @media (max-width: 768px) {
     h1 { font-size: 2.5rem; }
     .tagline { font-size: 1.2rem; }
     .nav-links { display: none; }
+
+    .product-detail {
+        padding: 3rem 1rem;
+    }
+
+    .product-container {
+        padding: 2rem;
+        gap: 2rem;
+    }
 }
