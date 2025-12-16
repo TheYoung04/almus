@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+*:focus-visible {
+    outline: 3px solid #ff8c00;
+    outline-offset: 4px;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #1a1a1a 0%, #2d1810 100%);
@@ -285,5 +294,20 @@ footer {
     .product-container {
         padding: 2rem;
         gap: 2rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
     }
 }
