@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Accessibility: Visible focus indicators for keyboard users */
+:focus-visible {
+    outline: 3px solid #ff8c00; /* DarkOrange for high visibility */
 html {
     scroll-behavior: smooth;
 }
