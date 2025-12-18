@@ -11,14 +11,8 @@
 }
 
 /* Accessibility: Visible focus indicators for keyboard users */
-:focus-visible {
-    outline: 3px solid #ff8c00; /* DarkOrange for high visibility */
-html {
-    scroll-behavior: smooth;
-}
-
 *:focus-visible {
-    outline: 3px solid #ff8c00;
+    outline: 3px solid #ff8c00; /* DarkOrange for high visibility */
     outline-offset: 4px;
 }
 
