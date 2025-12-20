@@ -167,6 +167,8 @@ h1 {
 }
 
 .product-image img {
+    width: auto;
+    height: auto;
     max-width: 100%;
     max-height: 500px;
     border-radius: 20px;
