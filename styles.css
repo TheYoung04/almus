@@ -20,6 +20,24 @@ html {
     outline-offset: 4px;
 }
 
+.skip-link {
+    position: absolute;
+    top: -9999px;
+    left: 0;
+    background: #ff4500;
+    color: white;
+    padding: 1rem;
+    z-index: 9999;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0 0 10px 0;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #1a1a1a 0%, #2d1810 100%);
