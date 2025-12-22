@@ -10,3 +10,7 @@
 ## 2024-10-24 - Fixed Header & Anchor Navigation
 **Learning:** Fixed headers often obscure content when navigating via anchor links (`#section`). Adding `scroll-padding-top` to `html` matching the header height solves this elegantly without JavaScript or complex padding hacks on sections.
 **Action:** Always check anchor navigation in sites with fixed headers and apply `scroll-padding-top`.
+
+## 2024-05-24 - Icon Consistency & Navigation Shortcuts
+**Learning:** Unicode emojis are unreliable for UI icons (rendering as 'tofu' in some environments). 'Skip to Content' links must be visibly focused to be effective for keyboard users.
+**Action:** Use icon libraries (FontAwesome) instead of raw emojis. Ensure skip links utilize `:focus-visible` or `:focus` to appear on demand.
