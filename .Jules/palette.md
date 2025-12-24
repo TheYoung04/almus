@@ -10,3 +10,6 @@
 ## 2024-10-24 - Fixed Header & Anchor Navigation
 **Learning:** Fixed headers often obscure content when navigating via anchor links (`#section`). Adding `scroll-padding-top` to `html` matching the header height solves this elegantly without JavaScript or complex padding hacks on sections.
 **Action:** Always check anchor navigation in sites with fixed headers and apply `scroll-padding-top`.
+## 2024-10-24 - Skip Link Navigation
+**Learning:** Fixed headers require 'z-index' planning for skip links. The skip link must have a higher z-index than the header to be visible. Also, target containers need 'tabindex="-1"' for programmatic focus to land correctly in all browsers.
+**Action:** When implementing skip links, verify z-index stacking and ensure the target ID has 'tabindex="-1"'.
