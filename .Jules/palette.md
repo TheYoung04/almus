@@ -10,3 +10,6 @@
 ## 2024-10-24 - Fixed Header & Anchor Navigation
 **Learning:** Fixed headers often obscure content when navigating via anchor links (`#section`). Adding `scroll-padding-top` to `html` matching the header height solves this elegantly without JavaScript or complex padding hacks on sections.
 **Action:** Always check anchor navigation in sites with fixed headers and apply `scroll-padding-top`.
+## 2024-10-24 - Skip Links & Focus Management
+**Learning:** Skip links pointing to sections (like `#home`) must have `tabindex="-1"` on the target element. Without this, browsers will scroll to the element but not shift keyboard focus, forcing the user to tab through the navigation again.
+**Action:** When adding skip links, always ensure the target ID exists and has `tabindex="-1"` (unless it's natively focusable).
