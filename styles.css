@@ -320,3 +320,24 @@ footer {
         transition: none !important;
     }
 }
+
+/* Skip Link (Accessibility) */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #ff4500;
+    color: white;
+    padding: 8px 16px;
+    z-index: 2000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0 0 8px 0;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: 3px solid #fff;
+    outline-offset: -2px;
+}
